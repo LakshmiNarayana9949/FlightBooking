@@ -13,8 +13,8 @@ namespace AirlinesService.Controllers
     [ApiController]
     public class AirLineController : ControllerBase
     {
-        IAirlineService _airLineService;
-        public AirLineController(IAirlineService airLineService)
+        flightBookingContext _airLineService;
+        public AirLineController(flightBookingContext airLineService)
         {
             _airLineService = airLineService;
         }
@@ -22,25 +22,25 @@ namespace AirlinesService.Controllers
         [HttpGet("FindAll")]
         public List<AirLine> FindAllAirlines()
         {
-            return _airLineService.FindAllAirlines();
+            return _airLineService.AirLines.ToList();
         }
 
-        [HttpPost]
-        public void AddNewAirLine(AirLine airLine)
-        {
-            _airLineService.AddNewAirline(airLine);
-        }
+        //[HttpPost]
+        //public void AddNewAirLine(AirLine airLine)
+        //{
+        //    _airLineService.AddNewAirline(airLine);
+        //}
 
-        [HttpPut]
-        public void EditAirLine(int id)
-        {
-            _airLineService.EditAirline(id);
-        }
+        //[HttpPut]
+        //public void EditAirLine(int id)
+        //{
+        //    _airLineService.EditAirline(id);
+        //}
 
-        [HttpDelete]
-        public void DeleteAirLine(int id)
-        {
-            _airLineService.DeleteAirline(id);
-        }
+        //[HttpDelete]
+        //public void DeleteAirLine(int id)
+        //{
+        //    _airLineService.DeleteAirline(id);
+        //}
     }
 }
