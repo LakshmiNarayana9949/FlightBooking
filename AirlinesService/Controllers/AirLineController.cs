@@ -14,13 +14,12 @@ namespace AirlinesService.Controllers
     public class AirLineController : ControllerBase
     {
         IAirlineService _airLineService;
-        public AirLineController(IAirlineService iAirLineService)
+        public AirLineController(IAirlineService airLineService)
         {
-            _airLineService = iAirLineService;
+            _airLineService = airLineService;
         }
 
-        [HttpGet]
-        [Route("FindAll")]
+        [HttpGet("FindAll")]
         public List<AirLine> FindAllAirlines()
         {
             return _airLineService.FindAllAirlines();
