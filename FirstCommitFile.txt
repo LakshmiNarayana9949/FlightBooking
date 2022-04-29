@@ -1,3 +1,5 @@
-This file is created for Initial commit to the repository
+This file is created for Initial commit to the repository changes by sai
+
+Krishna
 
 Scaffold-DbContext "Server=KAKUMANI\SQLEXPRESS;Database=EmployeeDB;User Id=sa;Password=sa@12345" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Models
